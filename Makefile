@@ -12,6 +12,8 @@ INSTALL_DIR ?= ./.install
 install: esme-gpio-toggle
 	install -d $(INSTALL_DIR)/usr/bin
 	install -m 0755 esme-gpio-toggle $(INSTALL_DIR)/usr/bin/
+	install -d $(INSTALL_DIR)/etc/init.d
+	install -m 0755 esme-gpio26-toggle $(INSTALL_DIR)/etc/init.d/
 
 # Cible clean
 clean:
