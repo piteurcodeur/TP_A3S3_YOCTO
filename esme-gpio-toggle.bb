@@ -16,7 +16,12 @@ LIC_FILES_CHKSUM = ""
 SRC_URI = ""
 
 inherit pkgconfig
+inherit update-rc.d
+
 DEPENDS = "libgpiod"
+
+INITSCRIPT_PACKAGES = "${PN}"
+INITSCRIPT_NAME_${PN} = "esme-gpio-toggle"
 
 # NOTE: this is a Makefile-only piece of software, so we cannot generate much of the
 # recipe automatically - you will need to examine the Makefile yourself and ensure
