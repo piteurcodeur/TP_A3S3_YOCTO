@@ -15,13 +15,13 @@ LIC_FILES_CHKSUM = ""
 # No information for SRC_URI yet (only an external source tree was specified)
 SRC_URI = ""
 
-inherit pkgconfig
-inherit update-rc.d
+inherit pkgconfig update-rc.d
 
 DEPENDS = "libgpiod"
 
 INITSCRIPT_PACKAGES = "${PN}"
-INITSCRIPT_NAME_${PN} = "esme-gpio-toggle"
+INITSCRIPT_NAME = "esme-gpio26-toggle"
+INITSCRIPT_PARAMS = "start 99 5 2 . stop 20 0 1 6 ."
 
 # NOTE: this is a Makefile-only piece of software, so we cannot generate much of the
 # recipe automatically - you will need to examine the Makefile yourself and ensure
@@ -41,4 +41,3 @@ do_install () {
 	# This is a guess; additional arguments may be required
 	oe_runmake install INSTALL_DIR=${D}
 }
-
