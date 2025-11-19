@@ -13,7 +13,8 @@ LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = ""
 
 # No information for SRC_URI yet (only an external source tree was specified)
-SRC_URI = ""
+SRC_URI = "git://https://github.com/piteurcodeur/TP_A3S3_YOCTO.git;protocol=https;branch=master"
+SRCREV = "8971aa9f6879d6c33a0bdb83466be9263923c384"
 
 inherit pkgconfig update-rc.d
 
